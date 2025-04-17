@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  container_name: rag_chromadb
+  image: chromadb/chroma
+  volumes:
+      - ./data/.chroma:/chroma/chroma
+  environment:
+      IS_PERSISTENT: "true" 
+      ANONYMIZED_TELEMETRY: "true" 
