@@ -1,0 +1,19 @@
+{
+  "name": "chroma-rag",
+  "version": "1.0.0",
+  "description": "This is a node.js JavaScript application that interfaces with Ollama and ChromaDB, in order to generate a RAG Database with a REST API. An LLM can then call this database to get RAG information for a prompt.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christroutner/chroma-rag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christroutner/chroma-rag/issues"
+  },
+  "homepage": "https://github.com/christroutner/chroma-rag#readme"
+}
