@@ -16,5 +16,16 @@
   "bugs": {
     "url": "https://github.com/christroutner/chroma-rag/issues"
   },
-  "homepage": "https://github.com/christroutner/chroma-rag#readme"
+  "homepage": "https://github.com/christroutner/chroma-rag#readme",
+  "dependencies": {
+    "@langchain/textsplitters": "0.1.0",
+    "chromadb": "2.2.1",
+    "express": "5.1.0",
+    "multer": "1.4.5-lts.2",
+    "ollama": "0.5.15",
+    "uuid": "11.1.0"
+  },
+  "devDependencies": {
+    "axios": "^1.8.4"
+  }
 }
