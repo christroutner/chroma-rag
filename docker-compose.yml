@@ -5,7 +5,9 @@ services:
     container_name: chromadb
     image: chromadb/chroma
     volumes:
-        - ./data/chroma:/chroma/chroma
+        - ./data/chroma:/data
+        #- /home/trout/work/llm/chroma-rag/data/chroma:/chroma/chroma
+        
     ports:
         - '7230:8000' # <host port>:<container port>
     environment:
