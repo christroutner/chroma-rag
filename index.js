@@ -95,11 +95,12 @@ async function start() {
           queryTexts: query,
           nResults: 6
         })
+        console.log('results: ', results)
 
-        // console.log('results: ', results)
-        console.log(`Returning ${results.documents.length} documents as result for query: ${query}`)
+        const documents = results.documents[0]
+        console.log(`Returning ${documents.length} documents as result for query: ${query}`)
 
-        res.json({ results });
+        res.json({ results: documents });
 
       } catch (error) {
         console.error(error);
