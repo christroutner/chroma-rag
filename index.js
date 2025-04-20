@@ -6,12 +6,11 @@ import { Ollama } from 'ollama';
 import express from 'express';
 import { ChromaClient, OllamaEmbeddingFunction } from 'chromadb';
 import { v4 as uuidv4 } from 'uuid';
-import multer from 'multer';
 
 
 // Constants
 const OLLAMA_HOST = 'http://192.168.2.117:11434'
-const CHROMADB_HOST = 'http://172.17.0.1:7230'
+const CHROMADB_HOST = 'http://192.168.2.117:7230'
 const OLLAMA_MODEL_EMBEDDING = 'nomic-embed-text'
 
 async function start() {
@@ -93,7 +92,7 @@ async function start() {
         console.log('query: ', query)
 
         const results = await collection.query({
-          queryTexts: [query],
+          queryTexts: query,
           nResults: 6
         })
 
