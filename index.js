@@ -30,8 +30,8 @@ async function start() {
 
     // Initialize Ollama Embedding Function
     const embedder = new OllamaEmbeddingFunction({
-        url: `${OLLAMA_HOST}/api/embeddings`,
-        model: OLLAMA_MODEL_EMBEDDING,
+      url: `${OLLAMA_HOST}/api/embeddings`,
+      model: OLLAMA_MODEL_EMBEDDING,
     });
 
 
@@ -59,7 +59,7 @@ async function start() {
 
     const app = express();
     const port = 3000;
-    
+
     // curl -H "Content-Type: application/json" -X POST -d '{ "content": "This is some content" }' localhost:3000/data
     app.post('/upload', express.json(), async (req, res) => {
       try {
@@ -70,7 +70,7 @@ async function start() {
         console.log('content: ', content)
 
         const uniqueId = uuidv4();
-        
+
         await collection.add({
           ids: [uniqueId],
           documents: [content],
@@ -98,7 +98,7 @@ async function start() {
         console.log('results: ', results)
 
         res.json({ results });
-        
+
       } catch (error) {
         console.error(error);
         res.status(500).json({ error: error.message });
@@ -108,7 +108,7 @@ async function start() {
     app.listen(port, () => {
       console.log(`Server started on port ${port}`);
     });
-    
+
   } catch(err) {
     console.error(err)
   }
