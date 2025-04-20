@@ -4,17 +4,20 @@ This is a node.js JavaScript application that interfaces with Ollama and ChromaD
 
 This is a prototype Express.js REST API server. It has an `/upload` endpoint for uploading data to the database. The `/query` endpoint allows Semantic Search queries for content from the database. That retrieved content can be used as part of a prompt to an LLM.
 
-## Installation
+## Installation & Running
 
 - `git clone https://github.com/christroutner/chroma-rag`
 - `cd chroma-rag`
 - `docker-compose pull`
-- `npm install`
+- `docker-compose build --no-cache`
+- `docker-compose up -d`
 
-## Running
+## Usage
 
-- Start the Chroma database: `docker-compose up -d`
-- Terminal 1: Start the Express server: `node index.js`
-- Terminal 2: Change directory to examples: `cd examples`
-- Load test data into database: `node 01-upload-test-docs.js`
-- Query the database: `node 02-query.js`
+See the following JavaScript examples scripts:
+
+- [Upload document example](./examples/01-upload-test-docs.js) - Upload markdown documents to the RAG database.
+- [Retrieval example](./examples/02-query.js) - Submit a semantic-text query and retrieve relevant documents.
+
+## License
+[MIT](./LICENSE.md)
