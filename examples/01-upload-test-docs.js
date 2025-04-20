@@ -7,7 +7,7 @@ import axios from 'axios';
 import fs from 'fs';
 
 // Constants
-const url = 'http://localhost:3000/upload'
+const url = 'http://172.17.0.1:3000/upload'
 const filePath = './test-docs'
 
 async function start() {
