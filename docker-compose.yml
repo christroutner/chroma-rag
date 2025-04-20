@@ -18,6 +18,8 @@ services:
   chroma-rag:
     build: .
     container_name: chroma-rag
+    links:
+      - chromadb
     ports:
       - '3000:3000' # <host port>:<container port>
     restart: always

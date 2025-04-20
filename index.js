@@ -11,7 +11,7 @@ import multer from 'multer';
 
 // Constants
 const OLLAMA_HOST = 'http://192.168.2.117:11434'
-const CHROMADB_HOST = 'http://localhost:7230'
+const CHROMADB_HOST = 'http://172.17.0.1:7230'
 const OLLAMA_MODEL_EMBEDDING = 'nomic-embed-text'
 
 async function start() {
