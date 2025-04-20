@@ -92,7 +92,7 @@ async function start() {
 
         const results = await collection.query({
           queryTexts: [query],
-          nResults: 2
+          nResults: 6
         })
 
         console.log('results: ', results)
