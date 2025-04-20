@@ -64,10 +64,10 @@ async function start() {
     app.post('/upload', express.json(), async (req, res) => {
       try {
         const data = req.body;
-        console.log('data: ', data)
+        // console.log('data: ', data)
 
         const { content, metadata } = data
-        console.log('content: ', content)
+        // console.log('content: ', content)
 
         const uniqueId = uuidv4();
 
@@ -76,6 +76,8 @@ async function start() {
           documents: [content],
           metadatas: [metadata]
         })
+
+        console.log(`Successfully added document ${uniqueId} to collection`)
 
         res.json({ received: data });
       } catch (error) {
@@ -95,7 +97,8 @@ async function start() {
           nResults: 6
         })
 
-        console.log('results: ', results)
+        // console.log('results: ', results)
+        console.log(`Returning ${results.documents.length} documents as result for query: ${query}`)
 
         res.json({ results });
 
