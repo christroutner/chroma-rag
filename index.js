@@ -9,8 +9,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 // Constants
-const OLLAMA_HOST = 'http://192.168.2.117:11434'
-const CHROMADB_HOST = 'http://192.168.2.117:7230'
+const OLLAMA_HOST = 'http://192.168.2.14:11434'
+const CHROMADB_HOST = 'http://192.168.2.14:7230'
 const OLLAMA_MODEL_EMBEDDING = 'nomic-embed-text'
 
 async function start() {
